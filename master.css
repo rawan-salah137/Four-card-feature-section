@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.title {
+    margin: 7.5rem auto 0 auto;
+    padding: 0.3rem;
+    max-width: 535px;
+}
+
+h1 {
+    color: hsl(234, 12%, 34%);
+    font-weight: 200;
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: hsl(234, 12%, 34%);
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.container p{
+    color: hsl(229, 6%, 66%);
+    font-weight: 200;
+    font-size: 1.3rem;
+}
+
+.cards {
+    display: grid;
+    column-gap: 2rem;
+}
+
+.card-1 {
+    border-top: .5rem solid hsl(180, 62%, 55%);
+}
+
+.card-2 {
+    border-top: .5rem solid hsl(0, 78%, 62%);
+}
+
+.card-3 {
+    border-top: .5rem solid hsl(34, 97%, 64%);
+}
+
+.card-4 {
+    border-top: .5rem solid hsl(212, 86%, 64%);
+}
+
+.card-img {
+    display: flex;
+    justify-content: right;
+}
+
+.card {
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px 6px #dedede;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@media (min-width:1250px) {
+    .cards{
+    grid-template-areas: "start mid-1 end" "start mid-2 end";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    }
+
+    .start {
+        grid-area: start;
+        align-self: center;
+    }
+    .mid-1 {
+        grid-area: mid-1;
+    }
+    .mid-2 {
+        grid-area: mid-2;
+    }
+    .end {
+        grid-area: end;
+        align-self: center;
+    }
+}
+
+@media (max-width:1249px) and (min-width:650px) {
+    .cards {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (ax-width:649px)and (min-width:300px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .title h1 {
+        font-size: 1.5rem;
+        width: 400px;
+    }
+}
